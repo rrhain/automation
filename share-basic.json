@@ -1,0 +1,41 @@
+{
+   "__001": "This file contains SHARE simulation parameters", 
+   "__002": "250 * M_IN_NAUTICAL_MILE =  250 * 1852",
+
+   "range" : "463000",
+   "srcRoot" : "/home/vmanfred/SHARE/Software/Tuscarora/Src/Patterns/Share/Sandbox",
+   "simulationsRoot" : "/tmp/sims",
+   "sandbox" : "/home/vmanfred/SHARE/Software/Tuscarora/Src/Patterns/Share/Sandbox",
+
+
+   "config_file" : "./configs/share-basic.cfg",
+   "duration" : "150",
+   "anim" : "1",
+
+   "trafficVars": {
+      "TRAFFIC_INTERARRIVAL" : [[1000000, 100]],
+      "TRAFFIC_PKT_SIZE" : [[500, 0]],
+      "TRAFFIC_START_TIME_SEC" : [20],
+      "TRAFFIC_END_TIME_SEC" : [40],
+      "TRAFFIC_IS_BRAIDED" : [1],
+      "MAX_BRAID_BRANCHING" : [2],
+      "TRAFFIC_DEST" : [[3, 2], [13, 12], [23, 22]]
+   },
+
+
+   "sysVars": {
+      "simShell": {
+      	    "num_nodes": [5, 25, 45],
+	    "mobility" : ["SteadyStateRWMobilityModel"],
+	    "rng_seed" : [13151, 53485]
+      },
+      "config": {
+      		  "logLevel" : [4],
+		  "GEM_SRC_INITIAL_INTERVAL" : [[10000, 5000]],
+		  "GEM_SRC_LONG_INTERVAL" : [[10000000, 50000]],
+		  "GEM_HISTORY_SIZE" : [5],
+	          "SCOPE_GEM_FLOOD" : [1],
+	          "NUM_GEM_RETRANSMIT" : [2]
+      }
+   }
+}

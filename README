@@ -1,0 +1,11 @@
+cd /home/rrosales/PROJECTS/BUA/SHARE/Software/Tuscarora/Src/Patterns/Share/Sandbox/analysis/automation/plotting
+export PYTHONPATH=/home/rrosales/PROJECTS/BUA/SHARE/Software/Tuscarora/Src/Patterns/Share/Sandbox/analysis/automation/plotting:PYTHONPATH
+python plot_results.py -f examples/matrix.txt
+
+
+To run:
+   export PYTHONPATH=/home/vmanfred/SHARE/Software/Tuscarora/Src/Patterns/Share/Sandbox/analysis/automation/plotting:$PYTHONPATH
+
+   Update dceln path in runsim to be full path
+
+   python simRunner.py -s share-basic.json

@@ -1,0 +1,51 @@
+{
+   "__001": "This file contains SHARE simulation parameters", 
+   "__002": "250 * M_IN_NAUTICAL_MILE =  250 * 1852",
+
+   "range" : "463000",
+   "srcRoot" : "/home/rrosales/SHARE/Software/Tuscarora/Src/Patterns/Share/Sandbox",
+   "simulationsRoot" : "/tmp/sims",
+   "sandbox" : "/home/rrosales/SHARE/Software/Tuscarora/Src/Patterns/Share/Sandbox",
+
+
+   "config_file" : "./configs/c2e-scenario-cgroup7-dutycycle10-150s.cfg",
+   "duration" : "150",
+   "anim" : "1",
+
+   "trafficVars": {
+      "TRAFFIC_INTERARRIVAL" : [[1000000, 100]],
+      "TRAFFIC_PKT_SIZE" : [[500, 0]],
+      "TRAFFIC_START_TIME_SEC" : [20],
+      "TRAFFIC_END_TIME_SEC" : [40],
+      "TRAFFIC_IS_BRAIDED" : [0]
+   },
+
+
+   "sysVars": {
+      "simShell": {
+      	    "num_nodes": [4, 9, 10],
+	    "mobility" : ["LineMobilityModel", "CliqueMobilityModel", "GridMobilityModel"],
+	    "rng_seed" : [10, 101]      
+      },
+      "config": {
+      		  "logLevel" : [4],
+		  "GEM_SRC_INITIAL_INTERVAL" : [[10000, 5000]],
+		  "GEM_SRC_LONG_INTERVAL" : [[10000000, 50000]],
+		  "GEM_HISTORY_SIZE" : [5]
+      }
+   },
+
+   "plotInHdr": ["NODES", "GSRCINT", "GHIST"],
+   "plotOutHdr": ["N",  "DutyCycle",  "Density", "Recv", "GGen", "GSrc",  "GFwd", "CAll", " CShare", " CGem", "DGen",  "DSrc",  "DFwd",  "DRecv",  "DDrop", " DFlood", "DXmit", "DRecv", "BCtrl", "BG", "BDXmit", "BDRecv", "SimTime"],
+
+   "plotVars": {
+      "simShell": {
+            "num_nodes" : "NODES"
+      },
+      "config": {
+            "GEM_SRC_INITIAL_INTERVAL" : "GSRCINT",
+      	    "GEM_HISTORY_SIZE" : "GHIST"
+      }
+   }
+
+}
